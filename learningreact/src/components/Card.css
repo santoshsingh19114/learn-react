@@ -1,0 +1,17 @@
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    color: rgb(237, 93, 148);
+    display: flex;
+  }
+  
+  .card-blue {
+    background-color: rgb(7, 252, 15);
+  }
+  
+  .card-red {
+    background-color: rgb(175, 139, 139);
+  }
+  
+

@@ -1,0 +1,12 @@
+.product-item-card {
+    display: flex;
+    background-color: #1ac0cf;
+    justify-content: space-between;
+  }
+  
+  .product-item-discription h2 {
+    color: #1f1616;
+  }
+  
+  /* Add more styles as needed */
+  

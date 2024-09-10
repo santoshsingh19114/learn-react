@@ -1,0 +1,21 @@
+.product-date {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    background-color: #eb9393;
+  }
+  
+  .product-date_month {
+    font-size: 1.3em;
+    color: #1a73e8;
+  }
+  
+  .product-date_day {
+    font-size: 1.2em;
+  }
+  
+  .product-date_year {
+    font-size: 1em;
+    color: #d6ff07;
+  }
+  
