@@ -17,12 +17,12 @@ function App() {
     return(
       <div className='refresh'>
         <h2>NO Tours left</h2>
-        <button on onClick={()=>setTours(data)}>Refresh</button>
+        <button className='btn-white' onClick={()=>setTours(data)}>Refresh</button>
       </div>
     );
   }
   return (
-    <div>
+    <div className='App'>
       <Tours tours={tours} removeTour={removeTour}></Tours>
     </div>
   );
