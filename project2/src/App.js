@@ -7,16 +7,14 @@ import { toast } from "react-toastify";
 
 function App() {
   const [courses, setCourses] = useState(null);
+  const [category, setCategory] = useState(filterData[0].title);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await fetch(apiUrl);
         const output = await res.json();
-        // save data into a variable
         setCourses(output.data);
-
-        // console.log(courses);
       } catch (error) {
         toast.error("something went wrong");
       }
@@ -25,22 +23,22 @@ function App() {
     fetchData();
   }, []);
 
-
-
   useEffect(() => {
-    // Log when courses state is updated
     if (courses) {
       console.log(courses);
     }
   }, [courses]);
 
   return (
-    <div className="App">
+    <div className="min-h-screen flex flex-col bg-blue-300">
       <Navbar />
 
-      <Filter filterData={filterData} />
-
-      <Cards courses={courses} />
+      <div>
+        <Filter filterData={filterData} category={category} setCategory={setCategory} />
+        <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
+          <Cards courses={courses} category={category} />
+        </div>
+      </div>
     </div>
   );
 }
